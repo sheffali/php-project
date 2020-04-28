@@ -1,0 +1,165 @@
+<head>  
+<style>
+.help{
+background-color:#000000;
+font-style:normal;
+font-size:36px;
+font-family:Georgia,"Times New Roman", Times, serif;
+color:#F5B7B1;
+text-align:center;
+height:30px;
+padding:15px 20px;
+}
+
+    img{
+         position: static;
+    padding: 20px; 
+    border: 3px solid #f9f8f7;
+    width: 200px;
+    height: 150px;
+  
+    }
+
+    img:hover{
+        width: 300px;
+    }
+    
+a:link {
+    color: yellow; 
+    background-color: transparent; 
+    text-decoration: none;
+    }
+    a:visited {
+    color: pink;
+    background-color: transparent;
+    text-decoration: none;
+}
+
+a:hover {
+    color: red;
+    background-color: transparent;
+    text-decoration: underline;
+}
+
+a:active {
+    color: yellow;
+    background-color: transparent;
+    text-decoration: underline;
+}
+  
+    #form
+    {
+        background-color:rgba(1,0,0,0.2);
+    }
+
+    hr
+{
+    border: dotted;
+    color:brown;
+}
+</style> 
+<script>
+function f1()
+{
+document.getElementById('name').style.color="red";
+}
+function f2()
+{
+document.getElementById('email').style.color="blue";
+}
+   function validate()
+ {
+             
+ if(document.myForm.Name.value == "" )
+         {
+            alert( "Please provide your name!" );
+            document.myForm.Name.focus() ;
+            return false;
+         }
+                
+        if( document.myForm.email.value == "" )
+         {
+            alert( "Please provide your Email!" );
+            document.myForm.email.focus() ;
+            return false;
+         } 
+            
+var letters = /^[A-Za-z]+$/;
+if(myForm.Name.value.match(letters))
+{
+return true;
+}
+else
+{
+alert('Username must have alphabet characters only');
+Name.focus();
+return false;
+}
+}
+  </script>
+</head>
+<title>Help Desk</title>
+<body background="bgc.jpg">
+<div class="help">FEEDBACK HELPS US GROW
+</div>
+<br />
+ <p>
+<center>
+    <div id="form">
+<form action="ty.php"  method="GET" name="myForm" onsubmit="return validate()">
+<legend>Enter your feedback here</legend>
+<fieldset>
+Your name:
+<input type="text" name="Name"  id="name"  value="robin"  onfocus="f1()">
+Your email:
+<input type="email" name="email"  id="email"  value="abc@xyz.com"  onkeypress="f2()" >
+Birth date
+<input type="date" name="bdate">
+<br>
+<br>
+    working as-
+<input type="checkbox" name="check" value="student"> student
+<input type="checkbox" name="check" value="working"> working
+    <br>
+    <br>
+ 
+  Contact No<input type="tel" name="quantity" size="10"  >&nbsp; &nbsp; &nbsp;
+I am
+<select name="visitor_type">
+  <option value="visitor">Visitor</option>
+  <option value="intern">Intern</option>
+  <option value="volunteer">Volunteer</option>
+</select>
+<br>
+<br>
+    rate us:
+ <input type="radio" name="rating" value="need improvement">Average
+<input type="radio" name="rating" value="still way to go"> Good
+<input type="radio" name="rating" value="keep it up"> Excellent
+    <br>
+    <br>
+Your feedback: <br>
+<br>
+<textarea name="comments" rows="10" cols="50" ></textarea><br><br>
+</fieldset>
+    
+<input type="submit"   name="submit1">
+ &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+</form> 
+    </div>
+<marquee>serving mankind is serving god</marquee>
+ <center>    
+
+</p>
+<hr>
+<hr> &nbsp; &nbsp; &nbsp; &nbsp;
+
+    <div id="container">
+<img src="hh.jpg"  >
+<img  src="hh2.jpg" >
+<img  src="2.jpg">
+    </div>
+   </body>
+</body>
+</html>
+
